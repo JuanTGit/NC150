@@ -23,4 +23,14 @@
 
 
 def isValid(s, t):
-	pass
+	# Check is for edgecase that we iterate through len(s) and it's shorter then len(t)
+	if len(s) != len(t): return False
+	countS, countT = {}, {}
+	# Iterate through the length of either and add each character into a hashmap
+	for i in range(len(s)):
+		countS[s[i]] = countS.get(s[i], 0) + 1
+		countT[t[i]] = countT.get(t[i], 0) + 1
+	# Return a boolean when comparing
+	return countS == countT
+
+# Leetcode Stopwatch: 00 : 01 : 58
