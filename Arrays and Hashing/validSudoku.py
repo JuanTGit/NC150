@@ -45,6 +45,23 @@
 # board.length == 9
 # board[i].length == 9
 # board[i][j] is a digit 1-9 or '.'.
-
+from collections import defaultdict
 def isValidSudoku(board):
-    pass
+    cols = defaultdict(set)
+    rows = defaultdict(set)
+    squares = defaultdict(set)
+
+    for r in range(9):
+        for c in range(9):
+            pass
+
+
+board = [["5","3",".",".","7",".",".",".","."],
+         ["6",".",".","1","9","5",".",".","."],
+         [".","9","8",".",".",".",".","6","."],
+         ["8",".",".",".","6",".",".",".","3"],
+         ["4",".",".","8",".","3",".",".","1"],
+         ["7",".",".",".","2",".",".",".","6"],
+         [".","6",".",".",".",".","2","8","."],
+         [".",".",".","4","1","9",".",".","5"],
+         [".",".",".",".","8",".",".","7","9"]]
